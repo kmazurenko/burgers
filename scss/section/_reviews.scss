@@ -36,7 +36,13 @@
   height: 100%;
   box-sizing: border-box;
   border: none;
-
+  flex-direction: column;
+  filter: grayscale(100%);
+  transition: .5s;
+  &:hover {
+    filter: grayscale(0%);
+    transition: .5s;
+}
 }
 
 .reviews__pic--anna {
@@ -99,6 +105,34 @@
   width: 110px;
   height: 35px;
   background-color: #2f3234;
+  text-align: center;
 }
 
+.review__name, .review__info, .review__more-info {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.reviews__description {
+  padding-left: 20px;
+  min-width: 222px;
+  opacity: 0;
+  transition: 0.5s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.more-info__link {
+  width: 80px;
+  height: 11px;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
